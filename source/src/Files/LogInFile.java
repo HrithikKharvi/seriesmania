@@ -11,6 +11,7 @@ public class LogInFile {
 
     public static void main(String[] args) {
 
+        //Code to test whether file have any data
 //        try(DataOutputStream out = new DataOutputStream(new FileOutputStream("credentials.dat"))){
 //
 //            out.writeInt(credentials.size());
@@ -31,8 +32,6 @@ public class LogInFile {
 
             for(int i=0; i<totalData;i++){
                 String data[] = in.readUTF().split(",");
-//                System.out.println(data[0]);
-//                System.out.println(data[1]);
                 credentials.put(data[0],data[1]);
             }
 
