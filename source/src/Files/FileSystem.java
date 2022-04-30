@@ -22,7 +22,6 @@ public class FileSystem {
         try(ObjectOutputStream out = new ObjectOutputStream(new BufferedOutputStream(new FileOutputStream("series.dat")))){
             for(WebSeries seri : webSeries){
                 out.writeObject(seri);
-//                System.out.println(seri.getName());
             }
 
         } catch(Exception e){
@@ -32,16 +31,6 @@ public class FileSystem {
 
 
     static{
-//        WebSeries webs1 = new WebSeries("Money Heist","9.5","So and so","English","ashegfwiyf");
-//        WebSeries webs2 = new WebSeries("Dark","9.5","So and so","English","ashegfwiyf");
-//        WebSeries webs3 = new WebSeries("Dark","9.5","So and so","English","ashegfwiyf");
-//        WebSeries webs4 = new WebSeries("Dark","9.5","So and so","English","ashegfwiyf");
-//
-//
-//        webSeries = new ArrayList<>();
-//        webSeries.add(webs1);
-//        webSeries.add(webs2);
-
         try(ObjectInputStream in = new ObjectInputStream(new FileInputStream("series.dat"))){
             webSeries = new ArrayList<>();
             boolean eof = false;
@@ -73,7 +62,6 @@ public class FileSystem {
         try(ObjectOutputStream out = new ObjectOutputStream(new BufferedOutputStream(new FileOutputStream("series.dat")))){
             for(WebSeries seri : webSeries){
                 out.writeObject(seri);
-//                System.out.println(seri.getName());
             }
 
         } catch(Exception e){
